@@ -1,0 +1,19 @@
+"manifest_version":0.5.0,
+"name": "[M2] Mercury's Metronomy",
+"version": "0.5.0.",
+"description": "Input Discord messages on set interval",
+"permissions": ["storage", "tabs"],
+"background": {
+    "service_worker": "background.js",
+}
+"content_scripts":[
+    {
+        "matches": ["<all_urls"],
+        "js":["content.js"],
+    }
+],
+
+
+"action":{
+    "default_popup": "popup.html",
+}
