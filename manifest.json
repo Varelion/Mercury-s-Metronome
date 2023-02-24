@@ -1,19 +1,19 @@
-"manifest_version":0.5.0,
-"name": "[M2] Mercury's Metronomy",
-"version": "0.5.0.",
-"description": "Input Discord messages on set interval",
-"permissions": ["storage", "tabs"],
-"background": {
-    "service_worker": "background.js",
-}
-"content_scripts":[
+{
+  "manifest_version": 2,
+  "name": "[M2] Mercury's Metronomy",
+  "version": "0.5.0.",
+  "description": "Input Discord messages on set interval",
+  "content_scripts":[
     {
-        "matches": ["<all_urls"],
-        "js":["content.js"],
+      "matches": ["*://*.google.com/search?*"],
+      "js":["ddgposition.js"]
     }
-],
-
-
-"action":{
-    "default_popup": "popup.html",
+  ],
+  "permissions":[
+    "activeTab",
+    "https://duckduckgo.com/"
+  ],
+  "browser_action":{
+    "default_popup": "popup.html"
+  }
 }
