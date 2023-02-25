@@ -3,7 +3,7 @@
 // --------------------------
 const theChannel = '907451784656736346';
 const myAuthorization =
-  'MzYzMjcxNDU0MjM1ODIwMDMz.GEnh6c.3ReSRXSDUrXNn3qfkpvNt8JBVWLDaPOxTW9AoM';
+  'MzYzMjcxNDU0MjM1ODIwMDMz.GJTlwb.M0Zv_9g2aV99z1ITi6Asc-_u08nfgI_kQYUZkA';
 //#endregion The modular parts of the code
 
 function sendMessageToChannel(message) {
