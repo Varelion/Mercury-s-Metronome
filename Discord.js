@@ -1,9 +1,14 @@
+const winston = require('winston');
+const logger = winston.createLogger({
+  transports: [new winston.transports.File({ filename: 'crontab.log' })],
+});
+logger.info('Crontab task started');
+
 // --------------------------
 //#region The modular parts of the code
 // --------------------------
-const theChannel = '907451784656736346';
-const myAuthorization =
-  'MzYzMjcxNDU0MjM1ODIwMDMz.GJTlwb.M0Zv_9g2aV99z1ITi6Asc-_u08nfgI_kQYUZkA';
+const theChannel = '1';
+const myAuthorization = '1';
 //#endregion The modular parts of the code
 
 function sendMessageToChannel(message) {
@@ -28,10 +33,13 @@ function sendMessageToChannel(message) {
 // --------------------------
 //#region The commands you will be sending to the server
 // --------------------------
-const gambling = '!gamble 1000';
-const theJob = '!job performance';
+const gambling = '1';
+const theJob = '1';
 //#endregion The commands you will be sending to the server
 
-setTimeout(() => sendMessageToChannel(gambling), 1);
+// Your crontab task code goes here
+console.log('Hello from crontab task!');
 
+setTimeout(() => sendMessageToChannel(gambling), 1);
 setTimeout(() => sendMessageToChannel(theJob), 523);
+logger.info('Crontab task completed');
